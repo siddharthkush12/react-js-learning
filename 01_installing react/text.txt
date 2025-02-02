@@ -1,0 +1,23 @@
+Method-1:
+    command 1-> npx create-react-app fileName(in small letters)      {take too much time}
+
+Method-2:(through vite)
+    command 1-> npm create vite@latest        //let file name=myapp
+    command 2-> cd myapp
+    command 3-> npm install
+
+
+
+
+
+
+// to run project : npm run (scripts)
+
+// to resolve: npm install --save-dev ajv@^7
+
+
+
+other Command:
+1: sudo npm install -g npm@latest
+2: npm -v
+
