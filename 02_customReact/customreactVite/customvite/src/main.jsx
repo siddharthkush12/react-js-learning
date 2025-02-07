@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
 // Method-1(Wrong Way)
@@ -18,7 +18,7 @@ const element1=(        //It converted into object but in correct syntax(name)
   <a href="https://google.com" target="_blank">Press me</a>
 )
 
-//Method-3(Use ReactDOM)              // ReactDOM.createRoot(document.getElementById('root')).render
+//Method-3
 const reactElement1 = React.createElement(
   'a',
   {href: 'https://google.com',target: '_blank' },
@@ -26,7 +26,7 @@ const reactElement1 = React.createElement(
 )
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
     // element1
     reactElement1
     // <App />
