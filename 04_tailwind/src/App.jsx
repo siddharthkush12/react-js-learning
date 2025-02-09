@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <Card userName={myobj.userName} btnText="Click Me" />
-    <Card obj={myobj} />
+    <Card {...myobj} />
     <Card obj={newarr} />
    
     </>
