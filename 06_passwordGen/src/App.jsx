@@ -10,6 +10,7 @@ function App() {
   const [password, setPassword] = useState("");
 
   const passGen = useCallback(() => {
+    //{useCallback}load the function to cache and update function if value chages(written inside array)
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (numAllow) str += "1234567890";
@@ -23,13 +24,14 @@ function App() {
   }, [length, numAllow, charAllow, setPassword]);
 
   useEffect(() => {
+    //{useEffect}Run the given function if any value changes at any instant(lenght,numallow, etc)
     passGen();
   }, [length, numAllow, charAllow, passGen]);
 
-  const passref = useRef(null);
+  const passref = useRef(null); //To pass reference (in this case we ref to text area)
 
   const copyPassToClipboard = useCallback(() => {
-    passref.current?.select();        // To highlight select
+    passref.current?.select(); // To highlight select
     // passref.current?.setSelectionRange(0,3);               //To select range
     window.navigator.clipboard.writeText(password);
   }, [password]);
