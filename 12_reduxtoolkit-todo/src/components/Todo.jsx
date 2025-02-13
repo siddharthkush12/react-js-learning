@@ -11,14 +11,14 @@ function Todo() {
     <div className="min-w-3xl mx-auto">
       <p className="text-center text-2xl py-3">-:Todos:-</p>
       {todos.length === 0 ? (
-        <p className="text-center text-3xl">Sab delete ho gya Lawde</p>
+        <p className="text-center text-3xl">SAB DELETE HO GYA LAWDE</p>
       ) : (
         <ul className="space-y-3 list-none">
           {todos.map((todo) => {
             return (
               <li
                 key={todo.id}
-                className="flex justify-between items-center space-x-4 bg-amber-200 rounded p-3"
+                className="max-w-3xl flex justify-between items-center space-x-4 bg-amber-200 rounded p-3"
               >
                 <span className="text-lg">{todo.text.trim()}</span>
                 <button onClick={() => dispatch(removeTodo(todo.id))}>
